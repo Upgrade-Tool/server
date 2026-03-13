@@ -12,4 +12,7 @@ public class Office
     public DateTime UpdatedAt { get; set; }
 
     public ICollection<KioskDisplay> KioskDisplays { get; set; } = new List<KioskDisplay>();
+    public ICollection<UserOffice> UserOffices { get; set; } = new List<UserOffice>();
+
+    
 }

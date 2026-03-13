@@ -17,18 +17,31 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
     public DbSet<KioskDisplay> KioskDisplays { get; set; }
     public DbSet<KioskState> KioskStates { get; set; }
     public DbSet<Office> Offices { get; set; }
+    public DbSet<UserOffice> UserOffices { get; set; }
 
 
 
-  protected override void OnModelCreating(ModelBuilder builder)
-{
-    base.OnModelCreating(builder);
 
-    builder.Entity<Car>()
-        .Property(e => e.CarValueFactor)
-        .HasColumnType("numeric(3,2)");
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
 
-    builder.Entity<KioskState>()
-        .HasKey(e => e.KioskId);
-}
+        // Car value factor precision
+        builder.Entity<Car>()
+            .Property(e => e.CarValueFactor)
+            .HasColumnType("numeric(3,2)");
+
+        // KioskState uses KioskId as primary key
+        builder.Entity<KioskState>()
+            .HasKey(e => e.KioskId);
+
+        // Unique slug on KioskDisplay
+        builder.Entity<KioskDisplay>()
+            .HasIndex(e => e.Slug)
+            .IsUnique();
+
+        // UserOffice composite key
+        builder.Entity<UserOffice>()
+            .HasKey(e => new { e.UserId, e.OfficeId });
+    }
 }

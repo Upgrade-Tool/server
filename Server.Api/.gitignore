@@ -87,3 +87,6 @@ _[Ss]cripts
 server.AssemblyInfo.cs
 server.assets.cache
 server.csproj.*
+.env
+appsettings.json
+appsettings.*.json
