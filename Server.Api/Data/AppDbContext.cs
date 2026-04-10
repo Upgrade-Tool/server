@@ -18,6 +18,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
     public DbSet<KioskState> KioskStates { get; set; }
     public DbSet<Office> Offices { get; set; }
     public DbSet<UserOffice> UserOffices { get; set; }
+    public DbSet<Brand> Brands { get; set; }
 
 
 
@@ -30,6 +31,21 @@ public class AppDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
         builder.Entity<Car>()
             .Property(e => e.CarValueFactor)
             .HasColumnType("numeric(3,2)");
+
+        // Brand -> Car relationship
+        builder.Entity<Car>()
+            .HasOne(e => e.Brand)
+            .WithMany(b => b.Cars)
+            .HasForeignKey(e => e.BrandId);
+
+        // Drivetrain and Transmission stored as strings
+        builder.Entity<Car>()
+            .Property(e => e.Drivetrain)
+            .HasConversion<string>();
+
+        builder.Entity<Car>()
+            .Property(e => e.Transmission)
+            .HasConversion<string>();
 
         // KioskState uses KioskId as primary key
         builder.Entity<KioskState>()

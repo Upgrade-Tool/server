@@ -1,10 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Server.Api.Models;
 
 public class Car
 {
     public Guid Id { get; set; }
     public string Name { get; set; } = null!;
-    public string Brand { get; set; } = null!;
+    public Guid BrandId { get; set; }
+    public Brand Brand { get; set; } = null!;
     public int Horsepower { get; set; }
     public int RangeKm { get; set; }
     public string Drivetrain { get; set; } = null!;
