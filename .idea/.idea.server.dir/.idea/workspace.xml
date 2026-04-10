@@ -9,8 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36d89746-c315-49bd-9403-d600204c85ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Server.Api/DTOs/Brands.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +27,10 @@
     <setting file="file://$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server.Api/Repositories/IBrandRepository.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -99,6 +99,7 @@
       <updated>1772576413250</updated>
       <workItem from="1772576414948" duration="792000" />
       <workItem from="1775385592970" duration="12793000" />
+      <workItem from="1775858767708" duration="1446000" />
     </task>
     <servers />
   </component>
