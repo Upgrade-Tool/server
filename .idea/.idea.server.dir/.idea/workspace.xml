@@ -9,17 +9,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36d89746-c315-49bd-9403-d600204c85ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Server.Api/Controllers/CarController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.Api/Models/Brand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.Api/Models/Enums/Drivetrain.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.Api/Models/Enums/Transmission.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server.Api/Repositories/IBrandRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.Api/Data/AppDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Data/AppDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.Api/Migrations/AppDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Migrations/AppDbContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.Api/Models/Car.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Models/Car.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.Api/Server.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Server.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1772576413250</updated>
       <workItem from="1772576414948" duration="792000" />
-      <workItem from="1775385592970" duration="11178000" />
+      <workItem from="1775385592970" duration="12793000" />
     </task>
     <servers />
   </component>
