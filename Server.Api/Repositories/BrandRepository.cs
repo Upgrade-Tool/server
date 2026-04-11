@@ -16,9 +16,13 @@ public class BrandRepository : IBrandRepository
     }
 
 
-    public async Task<List<Brand>> GetAllAsync()
+    public async Task<List<Brand>> GetAllAsync(int page, int pageSize)
     {
-        return await _db.Brands.OrderBy(b => b.Name).ToListAsync();
+        return await _db.Brands
+            .OrderBy(b => b.Name)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync();
     }
 
     public async Task<Brand?> GetByIdAsync(Guid id)

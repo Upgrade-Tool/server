@@ -9,9 +9,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36d89746-c315-49bd-9403-d600204c85ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Server.Api/Services/BrandService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server.Api/Controllers/BrandController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server.Api/DTOs/Brands/BrandResponse.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server.Api/DTOs/Brands/CreateBrandRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server.Api/DTOs/Brands/UpdateBrandRequest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.server.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.server.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.Api/DTOs/Brands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/DTOs/Brands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.Api/DTOs/Brands.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.Api/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Repositories/BrandRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.Api/Repositories/IBrandRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Repositories/IBrandRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.Api/Services/BrandService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Server.Api/Services/BrandService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +29,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Server.Api/Controllers/BrandController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server.Api/Controllers/CarController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server.Api/Models/Enums/Drivetrain.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Server.Api/Models/Enums/Transmission.cs" root0="FORCE_HIGHLIGHTING" />
@@ -101,7 +109,7 @@
       <updated>1772576413250</updated>
       <workItem from="1772576414948" duration="792000" />
       <workItem from="1775385592970" duration="12793000" />
-      <workItem from="1775858767708" duration="2877000" />
+      <workItem from="1775858767708" duration="5539000" />
     </task>
     <servers />
   </component>

@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using Server.Api.Models;
 using Microsoft.AspNetCore.Identity;
 using Server.Api.Hubs;
+using Server.Api.Repositories;
+using Server.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
 builder.Services.AddSignalR();
+builder.Services.AddScoped<IBrandRepository, BrandRepository>();
+builder.Services.AddScoped<BrandService>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
