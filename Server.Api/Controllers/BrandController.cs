@@ -22,4 +22,42 @@ public class BrandController : ControllerBase
         var brands = await _brandService.GetAllAsync(page, pageSize);
         return Ok(brands);
     }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(Guid id)
+    {
+        var brand = await _brandService.GetByIdAsync(id);
+        if (brand == null)
+        {
+            return NotFound();
+        }
+
+        return Ok(brand);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create([FromBody] CreateBrandRequest request)
+    {
+        var brand = await _brandService.AddAsync(request);
+        return CreatedAtAction(nameof(GetById), new { id = brand.Id }, brand);
+    }
+
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdateBrandRequest request)
+    {
+        var brand = await _brandService.UpdateAsync(id, request);
+        if (brand == null)
+        {
+            return NotFound();
+        }
+        return Ok(brand);
+    }
+
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var sucess = await _brandService.DeleteAsync(id);
+        if (!sucess) return NotFound();
+        return NoContent();
+    }
 }
