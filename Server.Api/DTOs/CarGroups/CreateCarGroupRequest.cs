@@ -1,6 +1,8 @@
 namespace Server.Api.DTOs.CarGroups;
 
-public class CreateCarGroupRequest
-{
-    
-}
+public record CreateCarGroupRequest(
+    string Code,
+    string Name,
+    string DrivetrainType,
+    int SortOrder
+);

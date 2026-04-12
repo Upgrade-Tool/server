@@ -1,6 +1,8 @@
 namespace Server.Api.DTOs.CarGroups;
 
-public class UpdateCarGroupRequest
-{
-    
-}
+public record UpdateCarGroupRequest(
+    string Code,
+    string Name,
+    string DrivetrainType,
+    int SortOrder
+);
