@@ -1,6 +1,6 @@
 namespace Server.Api.Models.Enums;
 
-public enum Drivetrian {
+public enum Drivetrain {
     AWD,
     RWD,
     FWD,

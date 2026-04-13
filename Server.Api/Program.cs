@@ -18,7 +18,7 @@ builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<BrandService>();
 builder.Services.AddScoped<ICarGroupRepository, CarGroupRepository>();
 builder.Services.AddScoped<CarGroupService>();
-
+builder.Services.AddScoped<ICarRepository, CarRepository>();
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));

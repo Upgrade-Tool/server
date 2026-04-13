@@ -1,4 +1,4 @@
-using System.ComponentModel.DataAnnotations;
+using Server.Api.Models.Enums;
 
 namespace Server.Api.Models;
 
@@ -10,8 +10,8 @@ public class Car
     public Brand Brand { get; set; } = null!;
     public int Horsepower { get; set; }
     public int RangeKm { get; set; }
-    public string Drivetrain { get; set; } = null!;
-    public string Transmission { get; set; } = null!;
+    public Drivetrain Drivetrain { get; set; }
+    public Transmission Transmission { get; set; }
     public decimal CarValueFactor { get; set; }
     public string? ImageUrlSideLeft { get; set; }
     public string? ImageUrlSideRight { get; set; }
