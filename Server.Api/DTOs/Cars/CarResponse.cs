@@ -8,7 +8,7 @@ public record CarResponse(
     Guid BrandId,
     string BrandName,
     Guid GroupId,
-    string GroupName,
+    string GroupCode,
     int Horsepower,
     int RangeKm,
     Drivetrain Drivetrain,
