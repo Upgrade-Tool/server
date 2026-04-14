@@ -16,7 +16,7 @@ builder.Services.AddControllers()
     .AddJsonOptions(options =>
     {
         options.JsonSerializerOptions.Converters.Add(new System.Text.Json.Serialization.JsonStringEnumConverter());
-    });
+    }); //So we can use enums text, not just numbers
 builder.Services.AddSignalR();
 builder.Services.AddScoped<IBrandRepository, BrandRepository>();
 builder.Services.AddScoped<BrandService>();
@@ -24,6 +24,8 @@ builder.Services.AddScoped<ICarGroupRepository, CarGroupRepository>();
 builder.Services.AddScoped<CarGroupService>();
 builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped<CarService>();
+builder.Services.AddScoped<IOfficeRepository, OfficeRepository>();
+builder.Services.AddScoped<OfficeService>();
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
