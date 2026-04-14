@@ -26,6 +26,9 @@ builder.Services.AddScoped<ICarRepository, CarRepository>();
 builder.Services.AddScoped<CarService>();
 builder.Services.AddScoped<IOfficeRepository, OfficeRepository>();
 builder.Services.AddScoped<OfficeService>();
+builder.Services.AddScoped<IKioskDisplayRepository, KioskDisplayRepository>();
+builder.Services.AddScoped<KioskDisplayService>();
+
 
 
 builder.Services.AddDbContext<AppDbContext>(options =>
