@@ -28,6 +28,8 @@ builder.Services.AddScoped<IOfficeRepository, OfficeRepository>();
 builder.Services.AddScoped<OfficeService>();
 builder.Services.AddScoped<IKioskDisplayRepository, KioskDisplayRepository>();
 builder.Services.AddScoped<KioskDisplayService>();
+builder.Services.AddScoped<IKioskStateRepository, KioskStateRepository>();
+
 
 
 
