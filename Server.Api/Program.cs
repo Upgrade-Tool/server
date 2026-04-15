@@ -32,7 +32,6 @@ builder.Services.AddScoped<IKioskStateRepository, KioskStateRepository>();
 builder.Services.AddScoped<KioskStateService>();
 
 
-
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
@@ -78,6 +77,10 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-app.MapHub<KioskHub>("/hubs/kiosk");
-
+app.UseCors();
+app.MapHub<KioskHub>("/hubs/kiosk")
+    .RequireCors(policy => policy
+        .AllowAnyOrigin()
+        .AllowAnyHeader()
+        .AllowAnyMethod());
 app.Run();
