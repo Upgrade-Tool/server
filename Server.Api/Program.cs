@@ -78,9 +78,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.UseCors();
-app.MapHub<KioskHub>("/hubs/kiosk")
-    .RequireCors(policy => policy
-        .AllowAnyOrigin()
-        .AllowAnyHeader()
-        .AllowAnyMethod());
+app.MapHub<KioskHub>("/hubs/kiosk") //Make sure to remove CORS here in prod, only for dev enviorment
+    .RequireCors(policy => policy // to be removed
+        .AllowAnyOrigin() // to be removed
+        .AllowAnyHeader() // to be removed 
+        .AllowAnyMethod()); // to be removed
 app.Run();
